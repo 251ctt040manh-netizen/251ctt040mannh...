@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     
-    // --- CHỨC NĂNG 1: Xử lý thông báo kèm lộ trình chi tiết khi nhấn nút Đăng Ký ---
     const registerButtons = document.querySelectorAll(".register-btn");
     
     registerButtons.forEach(button => {
@@ -9,14 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
             const isPriceCard = this.closest(".price-card") !== null;
             
             if (isPriceCard) {
-                // Nếu click ở khu vực Bảng giá dịch vụ học tập
                 const card = this.closest(".price-card");
                 const serviceName = card.querySelector(".price-header h3").innerText;
                 const servicePrice = card.querySelector(".price-amount").innerText.split('\n')[0];
                 
                 alert(`🎉 ĐĂNG KÝ DỊCH VỤ THÀNH CÔNG!\n\n📌 Hình thức học: ${serviceName}\n💰 Mức học phí: ${servicePrice}\n\nTrung tâm Alpha đã ghi nhận dữ liệu của bạn và sẽ gọi điện xếp lớp ngay!`);
             } else {
-                // Nếu click ở khu vực Khóa học nổi bật
                 const courseName = this.parentElement.querySelector("h4").innerText;
                 let courseDetail = "";
                 
@@ -33,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // --- CHỨC NĂNG 2: Chuyển đổi giao diện Sáng / Tối mượt mà ---
     const themeToggleBtn = document.getElementById("theme-toggle");
     
     if (themeToggleBtn) {
