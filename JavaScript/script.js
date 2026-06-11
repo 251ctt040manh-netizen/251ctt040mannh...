@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     
     registerButtons.forEach(button => {
         button.addEventListener("click", function () {
-            // Xác định xem nút bấm nằm ở bảng giá hay nằm ở phần khóa học nổi bật
             const isPriceCard = this.closest(".price-card") !== null;
             
             if (isPriceCard) {
